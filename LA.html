@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Los Angeles</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel&family=Jost:ital,wght@0,400;0,600;1,500&family=Oleo+Script+Swash+Caps:wght@700&family=Pacifico&family=Permanent+Marker&display=swap"
+        rel="stylesheet">x
+    <style>
+        body,
+        h1 {
+            font-family: "Raleway", sans-serif
+        }
+
+        body,
+        html {
+            height: 100%
+        }
+
+        .bgimg {
+            background: url('/LAX.gif');
+            min-height: 100%;
+            background-position: center;
+            background-size: cover;
+        }
+    </style>
+</head>
+
+
+<body>
+    <h1
+        style="font-family: 'Oleo Script Swash Caps', cursive;font-size: 90px; transform: translate(30% , 10%); color: #FF70A6;">
+        Los Angeles
+    </h1>
+
+    <div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+        <div class="w3-display-topleft w3-padding-large w3-xlarge">
+            Logo
+        </div>
+        <div class="w3-display-middle">
+            <h1 class="w3-jumbo w3-animate-top">COMING SOON</h1>
+            <hr class="w3-border-grey" style="margin:auto;width:40%">
+            <p class="w3-large w3-center">35 days left</p>
+        </div>
+    </div>
+    <div class="wrapper">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="container">
+            <div class="flightDates-container" style="color:#FF70A6;">
+                <h1 style="font-family:'Oleo Script Swash Caps', cursive;">Catch a Flight!</h1>
+                <label for="dateStart">Pick your sweet escape's duration!</label>
+                <label for="dateStart">Depart</label>
+                <input type="date" placeholder="Enter your flight dates" id="dateStart" value=new Date">
+                <label for="dateEnd">to Return</label>
+                <input type="date" id="dateEnd">
+                <button id="searchFlights-btn">Search Flights</button>
+            </div>
+            <div id="result"></div>
+        </div>
+    </div>
+    <section id="display-section" data-city="Los Angeles" class="scrolling-wrapper" style="display:flex; overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    background-color:pink;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 300px;"></section>
+
+    <script src="../node_modules/axios/dist/axios.min.js"></script>
+    <script src="./index.js"></script>
+</body>
+
+</html>
